@@ -1,0 +1,397 @@
+
+
+
+
+*{
+    font-family: Helvetica ;
+    font-weight: 700;
+  }
+  
+
+
+
+  /*スマホーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/* ０から４８０　スマートフォン)*/
+@media (min-width: 0px) and (max-width: 480px) {
+  /* CSS を記載*/
+  
+
+  
+  .kanari{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .r1 {
+    background: rgba(135, 207, 235, 0.178);
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.315);
+    position: sticky;/*固定する*/
+    width: 30%;
+    display: block;
+    }
+    
+    .r1:hover {
+    background: rgb(104, 189, 223);
+    color: rgb(0, 0, 0);
+    }
+    
+    .r2 {
+      display: block;
+      width: 30%;
+      background: rgba(135, 207, 235, 0.178);
+      padding: 8px 16px;
+      color: rgba(0, 0, 0, 0.315);
+      }
+      
+      .r2:hover {
+      background: rgb(104, 223, 110);
+      color: rgb(0, 0, 0);
+      }
+  
+  
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        background: #444;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      p {
+        margin: 0 0 13px 0;
+      }
+      
+      a {
+        color: #fff;
+      }
+      
+      .center { 
+        text-align: center;
+        padding-top: 20px;
+       }
+
+      .center a:hover{
+        color:  #444;
+      }
+
+      
+      
+      .container {
+        width: 95%;
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+      
+      .episode {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        position: relative;
+      }
+      
+      .episode__number {
+        font-size: 10vw;
+        font-weight: 600;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        text-align: center;
+        height: calc(10vw + 20px);
+        transition: all 0.2s ease-in;
+      }
+      
+      .episode__content {
+        border-top: 2px solid #fff;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 10px;
+        padding: 15px 0;
+      }
+      
+      .episode__content .title {
+        font-weight: 600;
+      }
+      
+      .episode__content .story {
+        line-height: 26px;
+      }
+
+      .story p{
+        font-size: 10px;
+        line-height: 1.5em;
+      }
+      
+      @media (max-width: 600px) {
+        .episode__content {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .episode__content .story {
+          font-size: 15px;
+        }
+      }
+
+    }
+
+
+
+
+
+
+
+
+  
+  /*タブレットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/* ４８１以上１０２４以下　タブレット*/
+@media (min-width: 481px) and (max-width: 1000px) {
+  /* CSS を記載*/
+
+  
+  .kanari{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .r1 {
+    background: rgba(135, 207, 235, 0.178);
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.315);
+    position: sticky;/*固定する*/
+    width: 30%;
+    display: block;
+    }
+    
+    .r1:hover {
+    background: rgb(104, 189, 223);
+    color: rgb(0, 0, 0);
+    }
+    
+    .r2 {
+      display: block;
+      width: 30%;
+      background: rgba(135, 207, 235, 0.178);
+      padding: 8px 16px;
+      color: rgba(0, 0, 0, 0.315);
+      }
+      
+      .r2:hover {
+      background: rgb(104, 223, 110);
+      color: rgb(0, 0, 0);
+      }
+  
+  
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        background: #444;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      p {
+        margin: 0 0 13px 0;
+      }
+      
+      a {
+        color: #fff;
+      }
+      
+      .center { 
+        text-align: center;
+        padding-top: 20px;
+       }
+
+      .center a:hover{
+        color:  #444;
+      }
+
+      
+      
+      .container {
+        width: 95%;
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+      
+      .episode {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        position: relative;
+      }
+      
+      .episode__number {
+        font-size: 10vw;
+        font-weight: 600;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        text-align: center;
+        height: calc(10vw + 20px);
+        transition: all 0.2s ease-in;
+      }
+      
+      .episode__content {
+        border-top: 2px solid #fff;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 10px;
+        padding: 15px 0;
+      }
+      
+      .episode__content .title {
+        font-weight: 600;
+      }
+      
+      .episode__content .story {
+        line-height: 26px;
+      }
+      
+      @media (max-width: 600px) {
+        .episode__content {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .episode__content .story {
+          font-size: 15px;
+        }
+      }
+
+    }
+
+      /*PCーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/* １０２５以上　ノートパソコン、デスクトップ */
+@media (min-width: 1001px) { 
+  /* CSS を記載*/
+
+
+  
+  .kanari{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .r1 {
+    background: rgba(135, 207, 235, 0.178);
+    padding: 8px 16px;
+    color: rgba(0, 0, 0, 0.315);
+    position: sticky;/*固定する*/
+    width: 30%;
+    display: block;
+    }
+    
+    .r1:hover {
+    background: rgb(104, 189, 223);
+    color: rgb(0, 0, 0);
+    }
+    
+    .r2 {
+      display: block;
+      width: 30%;
+      background: rgba(135, 207, 235, 0.178);
+      padding: 8px 16px;
+      color: rgba(0, 0, 0, 0.315);
+      }
+      
+      .r2:hover {
+      background: rgb(104, 223, 110);
+      color: rgb(0, 0, 0);
+      }
+  
+  
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      
+      body {
+        background: #444;
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+      }
+      
+      p {
+        margin: 0 0 13px 0;
+      }
+      
+      a {
+        color: #fff;
+      }
+      
+      .center { 
+        text-align: center;
+        padding-top: 20px;
+       }
+
+      .center a:hover{
+        color:  #444;
+      }
+
+      
+      
+      .container {
+        width: 95%;
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+      
+      .episode {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        position: relative;
+      }
+      
+      .episode__number {
+        font-size: 10vw;
+        font-weight: 600;
+        padding: 10px 0;
+        position: sticky;
+        top: 0;
+        text-align: center;
+        height: calc(10vw + 20px);
+        transition: all 0.2s ease-in;
+      }
+      
+      .episode__content {
+        border-top: 2px solid #fff;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        grid-gap: 10px;
+        padding: 15px 0;
+      }
+      
+      .episode__content .title {
+        font-weight: 600;
+      }
+      
+      .episode__content .story {
+        line-height: 26px;
+      }
+      
+      @media (max-width: 600px) {
+        .episode__content {
+          grid-template-columns: 1fr;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .episode__content .story {
+          font-size: 15px;
+        }
+      }
+    }

@@ -1,0 +1,1110 @@
+
+
+
+
+*{
+  font-family: Helvetica ;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+
+/*スマホーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/* ０から４８０　スマートフォン)*/
+@media (min-width: 0px) and (max-width: 480px) {
+  /* CSS を記載*/
+
+
+
+.container {
+  margin: 0;
+  width: 100%;
+  overflow: scroll; /*親要素から子要素がはみ出した場合、スクロール領域にして隠す指定*/
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar { 
+  display: none;
+}
+
+
+.page {
+  flex-flow: column;
+    text-align: left;
+    display: flex;
+    width: 500px;
+    color: rgba(0, 0, 0, 0.315);
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+  }
+
+  .box::-webkit-scrollbar{
+    display: none;
+  }
+
+
+  
+  .box {
+    flex-flow: column;
+    text-align: right;
+    display: flex;
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+    }
+    
+    
+
+
+
+.memo{
+  text-align: left;
+  font-size: 5px;
+  width: 23vw;
+  margin-bottom: 0;
+  margin-top: 150px;
+}
+
+
+
+.insta img{
+  width: 25vw;
+  height: auto;
+  padding-top: 8px;
+}
+
+
+
+
+
+.wrapper {
+  height: 100%;
+  width: 60%;
+  text-align: left;
+  margin-left: 20px;
+
+}
+
+
+
+.main-view  {
+  height: 100vh;
+}
+
+
+
+.side-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 25vw;
+}
+
+
+
+
+
+
+header{
+  background-color: none;
+  width: 100%;
+  justify-content: flex-end;
+  position:fixed;
+  top:0px;
+  text-align: right;
+  z-index: 100;
+}
+
+header h2{
+  font-size: 13px; 
+  text-align: right;
+}
+
+header h1{
+  font-size: 30px;
+  text-align: right;
+  line-height: 0.9em;
+}
+
+header h3{
+  font-size: 8px;
+  text-align: right;
+  padding-top:60px;
+}
+
+header h3 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h3 a:hover{
+  color: #ffffff00;
+}
+
+header h4{
+  font-size: 18px;
+  text-align: right;
+  padding-right: 30%;
+  padding-top:180px;
+}
+
+header h4 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h4 a:hover{
+  color: #ffffff;
+}
+
+
+footer{
+  position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    position:fixed;
+}
+
+
+footer h5{
+  font-size: 10px;
+  padding-left: 21%;
+  padding-bottom:100px;
+}
+
+
+
+.topimg img{
+  width: 50vw;
+  height: auto;
+  margin-top: 100px;
+}
+
+
+.menulist p{
+  font-size: 10px;
+  margin-top: 110px;
+}
+
+
+
+
+
+/*タブメニュー*/
+
+.tab-area{
+  width: 250px;
+  padding-top: 0px;
+  font-size: 10px;
+  }
+
+  .tab-btn{
+  display:none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+  }
+  
+  .tab-list-wrap{
+  padding:0; /*デフォルトの値をクリア*/
+  margin: 0; /*デフォルトの値をクリア*/
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+  }
+   
+  .tab-list{
+  display:block;
+  padding-top: 3px;
+  padding-right: 10px;
+  cursor:pointer; /*オンマウス時にカーソルを指の形に*/
+  }
+
+  .tab-list:hover{
+  transform: translate(0px,10px);
+  }
+
+  .tab-list:active{
+    transform: translate(0px,10px);
+    }
+
+   
+  #tab-btn1:checked ~ .tab-list-wrap #tab-list1,
+  #tab-btn2:checked ~ .tab-list-wrap #tab-list2,
+  #tab-btn3:checked ~ .tab-list-wrap #tab-list3,
+  #tab-btn4:checked ~ .tab-list-wrap #tab-list4,
+  #tab-btn5:checked ~ .tab-list-wrap #tab-list5{  
+  background:#ffffff; /*対応するボタンにチェックが入ったときに背景を#ffffff（白）に*/
+  }
+  .tab-content{
+  padding-top: 0;
+  margin-top: 0;
+  display:none; /*初期状態を非表示に*/
+  }
+  #tab-btn1:checked ~ .tab-content-wrap #tab-content1,
+  #tab-btn2:checked ~ .tab-content-wrap #tab-content2,
+  #tab-btn3:checked ~ .tab-content-wrap #tab-content3,
+  #tab-btn4:checked ~ .tab-content-wrap #tab-content4,
+  #tab-btn5:checked ~ .tab-content-wrap #tab-content5{
+  display: block;/*対応するボタンにチェックが入ったときに表示*/
+  }
+
+  .tab-content-wrap{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .subject {
+    text-align: left;  /* 文章を左寄せする(※) */
+    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+    font-size: 9px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .date {
+    text-align: right; /* 文章を右寄せする */
+    font-size: 9px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .titlebar {
+  width: 250px;
+  padding-top: 30px;
+ }
+
+
+
+ .about{
+  width: 250px;
+  padding-top: 120px;
+  font-size: 10px;
+ }
+
+
+ .top480 img{
+  width: 50vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.subimg img{
+  width: 60vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.report{
+  padding-top: 120px;
+  font-size: 20px;
+ }
+
+ .report a{
+   color: black;
+   text-decoration: none;
+ }
+
+
+ .report img{
+  width: 30vw;
+  height: auto;
+  margin-top: 20px;
+}
+
+.report p{
+  padding-top: 10px;
+  font-size: 10px;
+  color: #7e7e7e;
+ }
+ 
+
+
+ .food img{
+  width: 40vw;
+  height: auto;
+  padding-top: 170px;
+  padding-left: 30%;
+}
+
+
+.last ul{
+  padding-top: 100px;
+  font-size: 10px;
+  padding-left: 0;
+  width: 70%;
+  display: flex;
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+ }
+
+ .last ul a{
+  color: black;
+  text-decoration: none;
+  display: block;
+ }
+
+ .last ul a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last ul a:active{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last p{
+   font-size: 5px;
+   padding-top: 50px;
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*タブレットーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+/* ４８１以上１０２４以下　タブレット*/
+@media (min-width: 481px) and (max-width: 1000px) {
+  /* CSS を記載*/
+
+
+.container {
+  margin: 0;
+  width: 100%;
+  overflow: scroll; /*親要素から子要素がはみ出した場合、スクロール領域にして隠す指定*/
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar { 
+  display: none;
+}
+
+
+.page {
+  flex-flow: column;
+    text-align: left;
+    display: flex;
+    width: 500px;
+    color: rgba(0, 0, 0, 0.315);
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+  }
+
+  .box::-webkit-scrollbar{
+    display: none;
+  }
+
+
+  
+  .box {
+    flex-flow: column;
+    text-align: right;
+    display: flex;
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+    }
+    
+    
+
+
+
+.memo{
+  text-align: left;
+  font-size: 8px;
+  width: 25vw;
+  margin-bottom: 0;
+  margin-top: 150px;
+}
+
+
+
+.insta img{
+  width: 25vw;
+  height: auto;
+  padding-top: 10px;
+}
+
+
+
+
+
+.wrapper {
+  height: 100%;
+  width: 60%;
+  text-align: left;
+  margin-left: 35px;
+
+}
+
+
+
+.main-view  {
+  height: 100vh;
+}
+
+
+
+.side-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 25vw;
+  opacity: 0.5;
+}
+
+.side-view:hover {
+    
+  opacity: 1;
+    }
+
+
+
+header{
+  background-color: none;
+  width: 100%;
+  justify-content: flex-end;
+  position:fixed;
+  top:0px;
+  text-align: right;
+  z-index: 100;
+}
+
+header h2{
+  font-size: 15px; 
+  text-align: right;
+}
+
+header h1{
+  font-size: 50px;
+  text-align: right;
+  line-height: 0.9em;
+}
+
+header h3{
+  font-size: 10px;
+  text-align: right;
+  padding-top:150px;
+}
+
+header h3 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h3 a:hover{
+  color: #ffffff00;
+}
+
+header h4{
+  font-size: 20px;
+  text-align: right;
+  padding-right: 30%;
+  padding-top:100px;
+}
+
+header h4 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h4 a:hover{
+  color: #ffffff;
+}
+
+
+footer{
+  position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    position:fixed;
+}
+
+
+footer h5{
+  font-size: 17px;
+  padding-left: 21%;
+  padding-bottom:100px;
+}
+
+
+
+.topimg img{
+  width: 50vw;
+  height: auto;
+  margin-top: 120px;
+}
+
+
+.menulist p{
+  font-size: 18px;
+  margin-top: 170px;
+}
+
+
+
+
+
+/*タブメニュー*/
+
+.tab-area{
+  width: 250px;
+  padding-top: 5px;
+  font-size: 18px;
+  }
+
+  .tab-btn{
+  display:none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+  }
+  
+  .tab-list-wrap{
+  padding:0; /*デフォルトの値をクリア*/
+  margin: 0; /*デフォルトの値をクリア*/
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+  }
+   
+  .tab-list{
+  display:block;
+  padding-top: 5px;
+  padding-right: 10px;
+  cursor:pointer; /*オンマウス時にカーソルを指の形に*/
+  }
+
+  .tab-list:hover{
+  transform: translate(0px,10px);
+  }
+
+  .tab-list:active{
+    transform: translate(0px,10px);
+    }
+
+   
+  #tab-btn1:checked ~ .tab-list-wrap #tab-list1,
+  #tab-btn2:checked ~ .tab-list-wrap #tab-list2,
+  #tab-btn3:checked ~ .tab-list-wrap #tab-list3,
+  #tab-btn4:checked ~ .tab-list-wrap #tab-list4,
+  #tab-btn5:checked ~ .tab-list-wrap #tab-list5{  
+  background:#ffffff; /*対応するボタンにチェックが入ったときに背景を#ffffff（白）に*/
+  }
+  .tab-content{
+  padding-top: 0;
+  margin-top: 0;
+  display:none; /*初期状態を非表示に*/
+  }
+  #tab-btn1:checked ~ .tab-content-wrap #tab-content1,
+  #tab-btn2:checked ~ .tab-content-wrap #tab-content2,
+  #tab-btn3:checked ~ .tab-content-wrap #tab-content3,
+  #tab-btn4:checked ~ .tab-content-wrap #tab-content4,
+  #tab-btn5:checked ~ .tab-content-wrap #tab-content5{
+  display: block;/*対応するボタンにチェックが入ったときに表示*/
+  }
+
+  .tab-content-wrap{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .subject {
+    text-align: left;  /* 文章を左寄せする(※) */
+    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+    font-size: 15px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .date {
+    text-align: right; /* 文章を右寄せする */
+    font-size: 15px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .titlebar {
+  width: 400px;
+  padding-top: 70px;
+ }
+
+
+
+ .about{
+  width: 400px;
+  padding-top: 250px;
+  font-size: 18px;
+ }
+
+
+ .top480 img{
+  width: 50vw;
+  height: auto;
+  margin-top: 80px;
+}
+
+.subimg img{
+  width: 60vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.report{
+  padding-top: 300px;
+  font-size: 20px;
+ }
+
+ .report a{
+   color: black;
+   text-decoration: none;
+ }
+
+
+ .report img{
+  width: 30vw;
+  height: auto;
+  margin-top: 20px;
+}
+
+.report p{
+  padding-top: 40px;
+  font-size: 13px;
+  color: #7e7e7e;
+ }
+ 
+
+
+ .food img{
+  width: 40vw;
+  height: auto;
+  padding-top: 200px;
+  padding-left: 30%;
+}
+
+
+.last ul{
+  padding-top: 100px;
+  font-size: 18px;
+  padding-left: 0;
+  width: 70%;
+  display: flex;
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+ }
+
+ .last ul a{
+  color: black;
+  text-decoration: none;
+  display: block;
+ }
+
+ .last ul a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last ul a:active{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last p{
+   font-size: 8px;
+   padding-top: 50px;
+ }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*pcーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+@media (min-width: 1001px) { 
+  /* CSS を記載*/
+
+
+.container {
+  margin: 0;
+  width: 100%;
+  overflow: scroll; /*親要素から子要素がはみ出した場合、スクロール領域にして隠す指定*/
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.container::-webkit-scrollbar { 
+  display: none;
+}
+
+
+.page {
+  flex-flow: column;
+    text-align: left;
+    display: flex;
+    width: 700px;
+    color: rgba(0, 0, 0, 0.315);
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+  }
+
+  .box::-webkit-scrollbar{
+    display: none;
+  }
+
+
+  
+  .box {
+    flex-flow: column;
+    text-align: right;
+    display: flex;
+    height:100vh;               /* 横幅を200pxに指定 */
+      overflow-y: scroll;          /* 縦方向にスクロール可能にする */
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+     -ms-overflow-style: none;    /*IE(Internet Explorer)・Microsoft Edgeへの対応*/
+  scrollbar-width: none;/*Firefoxへの対応*/
+    }
+    
+    
+
+
+
+.memo{
+  text-align: left;
+  font-size: 10px;
+  width: 25vw;
+  margin-bottom: 0;
+  margin-top: 350px;
+}
+
+
+
+.insta img{
+  width: 25vw;
+  height: auto;
+  padding-top: 10px;
+}
+
+
+
+
+
+.wrapper {
+  height: 100%;
+  width: 60%;
+  text-align: left;
+  margin-left: 35px;
+
+}
+
+
+
+.main-view  {
+  height: 100vh;
+}
+
+
+
+.side-view {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 25vw;
+  opacity: 0.5;
+}
+
+.side-view:hover {
+    
+  opacity: 1;
+    }
+
+
+
+header{
+  background-color: none;
+  width: 100%;
+  justify-content: flex-end;
+  position:fixed;
+  top:0px;
+  text-align: right;
+  z-index: 100;
+}
+
+header h2{
+  font-size: 20px; 
+  text-align: right;
+}
+
+header h1{
+  font-size: 80px;
+  text-align: right;
+  line-height: 0.9em;
+}
+
+header h3{
+  font-size: 13px;
+  text-align: right;
+  padding-top:150px;
+}
+
+header h3 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h3 a:hover{
+  color: #ffffff00;
+}
+
+header h4{
+  font-size: 24px;
+  text-align: right;
+  padding-right: 30%;
+  padding-top:100px;
+}
+
+header h4 a{
+  color: black;
+  text-decoration: none;
+}
+
+header h4 a:hover{
+  color: #ffffff;
+}
+
+
+footer{
+  position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+    width: 100%;
+    position:fixed;
+}
+
+
+footer h5{
+  font-size: 20px;
+  padding-left: 21%;
+  padding-bottom:100px;
+}
+
+
+
+.topimg img{
+  width: 50vw;
+  height: auto;
+  margin-top: 110px;
+}
+
+
+.menulist p{
+  font-size: 24px;
+  margin-top: 200px;
+}
+
+
+
+
+
+/*タブメニュー*/
+
+.tab-area{
+  width: 700px;
+  padding-top: 10px;
+  font-size: 24px;
+  }
+
+  .tab-btn{
+  display:none; /*タブの切り替えを制御するラジオボタンを非表示に*/
+  }
+  
+  .tab-list-wrap{
+  padding:0; /*デフォルトの値をクリア*/
+  margin: 0; /*デフォルトの値をクリア*/
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+  }
+   
+  .tab-list{
+  display:block;
+  padding-top: 8px;
+  padding-right: 10px;
+  cursor:pointer; /*オンマウス時にカーソルを指の形に*/
+  }
+
+  .tab-list:hover{
+  transform: translate(0px,10px);
+  }
+
+  .tab-list:active{
+    transform: translate(0px,10px);
+    }
+
+   
+  #tab-btn1:checked ~ .tab-list-wrap #tab-list1,
+  #tab-btn2:checked ~ .tab-list-wrap #tab-list2,
+  #tab-btn3:checked ~ .tab-list-wrap #tab-list3,
+  #tab-btn4:checked ~ .tab-list-wrap #tab-list4,
+  #tab-btn5:checked ~ .tab-list-wrap #tab-list5{  
+  background:#ffffff; /*対応するボタンにチェックが入ったときに背景を#ffffff（白）に*/
+  }
+  .tab-content{
+  padding-top: 0;
+  margin-top: 0;
+  display:none; /*初期状態を非表示に*/
+  }
+  #tab-btn1:checked ~ .tab-content-wrap #tab-content1,
+  #tab-btn2:checked ~ .tab-content-wrap #tab-content2,
+  #tab-btn3:checked ~ .tab-content-wrap #tab-content3,
+  #tab-btn4:checked ~ .tab-content-wrap #tab-content4,
+  #tab-btn5:checked ~ .tab-content-wrap #tab-content5{
+  display: block;/*対応するボタンにチェックが入ったときに表示*/
+  }
+
+  .tab-content-wrap{
+    margin: 0;
+    padding: 0;
+  }
+
+
+  .subject {
+    text-align: left;  /* 文章を左寄せする(※) */
+    float: left;     /* 左端に寄せて、後続を右側へ回り込ませる */
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .date {
+    text-align: right; /* 文章を右寄せする */
+    font-size: 20px;
+    padding-right: 10px;
+    line-height: 1.5em;
+ }
+ .titlebar {
+  width: 700px;
+  padding-top: 70px;
+ }
+
+
+
+ .about{
+  width: 800px;
+  padding-top: 300px;
+  font-size: 24px;
+ }
+
+
+ .top480 img{
+  width: 50vw;
+  height: auto;
+  margin-top: 80px;
+}
+
+.subimg img{
+  width: 70vw;
+  height: auto;
+  margin-top: 10px;
+}
+
+.report{
+  padding-top: 200px;
+  font-size: 24px;
+ }
+
+ .report a{
+   color: black;
+   text-decoration: none;
+ }
+
+
+ .report img{
+  width: 30vw;
+  height: auto;
+  margin-top: 20px;
+}
+
+.report p{
+  padding-top: 50px;
+  font-size: 15px;
+  color: #7e7e7e;
+ }
+ 
+
+
+ .food img{
+  width: 30vw;
+  height: auto;
+  padding-top: 300px;
+  padding-left: 30%;
+}
+
+
+.last ul{
+  padding-top: 100px;
+  font-size: 24px;
+  padding-left: 0;
+  width: 50%;
+  display: flex;
+  list-style-type:none; /*デフォルトの値をクリア*/
+  display:flex; /*ボタンを横並びに*/
+  justify-content:space-between; /*ボタンを横幅いっぱいに配置*/
+ }
+
+ .last ul a{
+  color: black;
+  text-decoration: none;
+  display: block;
+ }
+
+ .last ul a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last ul a:active{
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+ }
+
+ .last p{
+   font-size: 10px;
+   padding-top: 50px;
+ }
+
+ 
+
+} 
